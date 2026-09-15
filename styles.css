@@ -60,3 +60,14 @@
   .amap-marker{font-size:10px;padding-right:6px}
 }
 
+
+/* 手机端地图收紧高度，避免地图占满首屏 */
+@media (max-width:560px){
+  .map-stage{min-height:285px}
+  #realMap{height:285px}
+  .map-art{min-height:285px}
+  .map-card{max-height:220px;bottom:34px}
+  .map-card-image{min-height:180px}
+  .map-card-body{max-height:218px}
+}
+
