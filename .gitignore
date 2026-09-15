@@ -1,0 +1,7 @@
+*.docx
+~$*
+check_*.py
+inspect_*.py
+verify_*.py
+snap.py
+*.png
