@@ -5,78 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#17201d" />
     <title>陕西快板书体验一条龙</title>
-    <link rel="stylesheet" href="styles.css?v=amap22" />
-    <script>window._AMapSecurityConfig={securityJsCode:'a6486c6a48bc2e803188464b3180329f'};window.initAMap=()=>window.dispatchEvent(new Event('amap-ready'));</script>
-    <script src="https://webapi.amap.com/maps?v=2.0&key=918c41a91f92897a0891cd1651e1e7b3&callback=initAMap"></script>
+    <link rel="stylesheet" href="styles.css?v=home24" />
   </head>
-  <body>
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="返回首页">
+  <body class="home-page">
+    <header class="topbar home-topbar">
+      <a class="brand" href="index.html" aria-label="返回首页">
         <span class="brand-mark">板</span>
         <span><b>陕西</b> 快板书体验一条龙</span>
       </a>
-      <div class="top-meta"><span class="status-dot"></span> 四个传承点位 · 西安</div>
+      <nav class="site-nav" aria-label="主导航">
+        <a class="nav-current" href="index.html">首页</a>
+        <a href="map.html">点位地图</a>
+        <a href="digital-human.html">数字人</a>
+      </nav>
     </header>
 
-    <main id="top" class="page-shell">
-      <section class="intro-block">
-        <div class="eyebrow">XI'AN · KUAIBAN MAP / 01</div>
-        <h1>把一座城，<br /><em>走成一段</em>快板书。</h1>
-        <p class="intro-copy">从曲艺传承中心出发，沿着剧社、文化馆与剧院，认识仍在西安发生的声音与故事。</p>
-        <div class="intro-actions">
-          <button id="routeToggle" class="primary-button" type="button">查看完整路线 <span>↗</span></button>
-          <button id="focusCurrent" class="text-button" type="button">聚焦当前点位</button>
+    <main>
+      <section class="home-cover" aria-labelledby="cover-title">
+        <div class="cover-map" aria-hidden="true"></div>
+        <div class="cover-shade" aria-hidden="true"></div>
+        <div class="cover-content">
+          <p class="cover-kicker">SHAANXI KUAIBANSHU · XI'AN</p>
+          <h1 id="cover-title">把一座城，<br /><em>走成一段</em>快板书。</h1>
+          <p class="cover-intro">从一处传承点出发，走进西安的剧社、文化馆与剧院，听见快板书仍在城市里回响。</p>
+          <a class="cover-scroll" href="#entry"><span>向下探索</span><i>↓</i></a>
         </div>
-        <div class="metrics" aria-label="地图概况">
-          <div><strong>04</strong><span>传承点位</span></div>
-          <div><strong>1912</strong><span>易俗社创立</span></div>
-          <div><strong>01</strong><span>条参访路线</span></div>
-        </div>
+        <div class="cover-note">陕西曲艺 · 西安现场</div>
       </section>
 
-      <section class="map-layout" aria-label="点位地图">
-        <div class="map-stage">
-          <div class="map-heading"><span>高德地图 · 点位导览</span><span>西安 · 在线地图</span></div>
-          <div id="realMap" class="local-map" role="application" aria-label="西安快板书传承点位地图">
-            <div id="mapStatus" class="map-status" role="status">正在加载高德地图…</div>
-            <div id="amapContainer" class="amap-container" aria-hidden="false"></div>
-            <div id="mapLibre" class="maplibre-map" aria-hidden="true"></div>
-            <svg id="localMapSvg" viewBox="0 0 1000 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-              <defs><pattern id="localGrid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="#99a095" stroke-opacity=".22"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity=".18"/></filter></defs>
-              <image id="baseMapImage" href="assets/xian-map.png" x="0" y="0" width="1000" height="640" preserveAspectRatio="xMidYMid slice"/>
-              <rect width="1000" height="640" fill="#d6d1c5"/><rect width="1000" height="640" fill="url(#localGrid)"/>
-              <path class="local-park" d="M80 128C170 80 244 108 319 77s130-27 204 23 147 31 234 77 80 110 104 177-15 141-93 175-159-11-223 26-154 21-220-29-144-41-156-113 24-155-21-285z"/>
-              <path class="local-water" d="M-40 555C170 462 280 483 412 550s302 82 640-20"/><path class="local-water thin" d="M-20 582C170 489 286 512 416 574s304 77 628-17"/>
-              <g class="local-roads"><path d="M-20 525C170 470 318 412 488 367S764 260 1030 108"/><path d="M-30 168C157 212 280 310 433 341s296 31 604 115"/><path d="M220-20C266 152 342 275 459 361s227 161 367 326"/><path d="M807-20C702 108 642 207 614 310s-27 207-78 350"/><path class="minor" d="M27 350C177 305 292 316 430 355s288 53 558-25M179 622c75-117 163-171 284-197s267-4 482 83"/></g>
-              <g class="local-blocks"><path d="M132 224h92v59h-92zM243 212h78v71h-78zM337 232h65v51h-65zM142 301h82v44h-82zM249 303h88v42h-88z"/><path d="M496 126h89v68h-89zM605 143h67v51h-67zM692 127h109v67H692zM518 220h77v57h-77zM612 220h104v57H612z"/><path d="M738 370h85v54h-85zM842 356h70v68h-70zM764 450h64v47h-64zM842 449h100v48H842z"/></g>
-              <g class="local-labels"><text x="113" y="115">城墙以内</text><text x="797" y="577">曲江片区</text><text x="79" y="437">雁塔区</text><text x="817" y="269">新城区</text><text x="310" y="418">南二环</text><text x="697" y="311">北大街</text><text x="393" y="184">东大街</text></g>
-              <path id="routePath" class="local-route is-hidden" d="M183 465 C 308 431, 393 405, 504 354 S 680 260, 809 178"/>
-              <g id="markers"></g>
-            </svg>
-            <div class="local-zoom"><button id="zoomIn" type="button" aria-label="放大地图">+</button><button id="zoomOut" type="button" aria-label="缩小地图">−</button></div>
-          </div>
-          <article id="mapCard" class="map-card" aria-live="polite">
-            <button id="mapCardClose" class="map-card-close" type="button" aria-label="关闭点位卡片">×</button>
-            <div class="map-card-image" id="mapCardImage"></div>
-            <div class="map-card-body"><div class="map-card-kicker" id="mapCardKicker"></div><h3 id="mapCardTitle"></h3><p id="mapCardIntro"></p></div>
-          </article>
-          <div class="map-legend"><span><i class="legend-line"></i> 推荐参访路线</span><span><i class="legend-point"></i> 传承点位</span></div>
+      <section id="entry" class="home-entry">
+        <div class="entry-heading">
+          <p class="eyebrow">EXPLORE / 进入体验</p>
+          <h2>选择你的进入方式</h2>
+          <p>一张地图，带你走到真实的传承现场；一位数字人，把故事讲给你听。</p>
         </div>
-        <aside class="spot-panel"><div class="panel-kicker">INHERITORS / 传承人</div><div id="panelPeople" class="panel-people"></div><div class="panel-note">点击地图标记，查看该点位的完整简介与传承人信息。</div></aside>
+        <div class="entry-grid">
+          <a class="entry-card entry-map" href="map.html">
+            <div class="entry-card-top"><span>01</span><span>在线地图</span></div>
+            <div class="entry-card-copy"><h3>点位地图</h3><p>沿着西安城里的四个点位，认识快板书发生的地方。</p><span class="entry-link">打开地图 <b>↗</b></span></div>
+          </a>
+          <a class="entry-card entry-digital" href="digital-human.html">
+            <div class="entry-card-top"><span>02</span><span>视频体验</span></div>
+            <div class="entry-card-copy"><h3>数字人</h3><p>观看数字人讲述陕西快板书，听见传统艺术的当代表达。</p><span class="entry-link">进入数字人 <b>↗</b></span></div>
+          </a>
+        </div>
       </section>
     </main>
     <footer class="footer"><span>陕西快板书体验一条龙</span><span>资料持续补录中 · 2026</span></footer>
-    <script src="app.js?v=amap22"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
 
