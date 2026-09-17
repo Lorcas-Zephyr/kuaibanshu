@@ -143,3 +143,7 @@
   .site-nav a{padding:6px 0}
 }
 
+
+.map-page-actions{max-width:980px;margin:28px auto 0;padding:0 clamp(22px,5vw,80px)}
+@media(max-width:700px){.map-page-actions{margin-top:22px;padding:0 22px;gap:20px;flex-wrap:wrap}}
+
